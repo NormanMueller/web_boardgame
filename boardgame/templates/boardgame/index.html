@@ -14,6 +14,7 @@
         <th>Gamerank</th>
         <th>GameImage</th>
         <th>EbayKleinanzeigen</th>
+        <th>Bücherhallen</th>
     </tr>
     {% for entry in entries %}  
     <tr>
@@ -25,6 +26,12 @@
             <a href="{{ entry.ebay_kleinanzeigen.link }}">{{ entry.ebay_kleinanzeigen.price }} </a> <br>
              Ort:{{ entry.ebay_kleinanzeigen.location }} <br>
              Date: {{ entry.ebay_kleinanzeigen.date }}
+        <td> 
+            Bücherhallen:
+             availability:{{ entry.bücherhallen.availability }} <br>
+             count: {{ entry.bücherhallen.count }}<br>
+             current_item_state: <strong style="color: blue;">{{ entry.bücherhallen.current_item_state }}</strong><br>
+             category: {{ entry.bücherhallen.category}}<br>
         </td>
     </tr>
     {% endfor %}
